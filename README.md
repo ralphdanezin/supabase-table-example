@@ -1,6 +1,6 @@
 # Exemplos de Criação de Tabelas no Supabase
 
-Este repositório contém exemplos de como criar tabelas no Supabase usando SQL. O Supabase é uma alternativa open-source ao Firebase, que oferece um banco de dados PostgreSQL completo com APIs automáticas.
+Este repositório contém exemplos de como criar tabelas no Supabase usando SQL e como interagir com essas tabelas usando a biblioteca cliente JavaScript do Supabase.
 
 ## O que é o Supabase?
 
@@ -36,6 +36,8 @@ Existem duas maneiras principais de criar tabelas no Supabase:
 
 ## Exemplos Incluídos
 
+### Exemplos SQL
+
 O arquivo [create_table_example.sql](./create_table_example.sql) contém exemplos de:
 
 1. Tabela simples de tarefas (todos)
@@ -43,6 +45,47 @@ O arquivo [create_table_example.sql](./create_table_example.sql) contém exemplo
 3. Tabela de produtos com relacionamentos
 4. Criação de uma view
 5. Criação de uma materialized view
+
+### Exemplos JavaScript
+
+Este repositório também inclui exemplos de como interagir com as tabelas do Supabase usando JavaScript:
+
+- [supabase-client-example.js](./supabase-client-example.js): Contém funções para realizar operações CRUD básicas e consultas mais avançadas
+- [app-example.js](./app-example.js): Demonstra como usar as funções em uma aplicação real
+
+## Como Executar os Exemplos JavaScript
+
+### Pré-requisitos
+
+- Node.js (versão 14 ou superior)
+- Um projeto Supabase (crie um gratuitamente em [supabase.com](https://supabase.com))
+
+### Configuração
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/ralphdanezin/supabase-table-example.git
+   cd supabase-table-example
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Crie um arquivo `.env` baseado no `.env.example`:
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Edite o arquivo `.env` e adicione suas credenciais do Supabase (encontradas no painel do Supabase em Configurações do Projeto > API).
+
+5. Execute o script SQL no painel do Supabase para criar as tabelas necessárias.
+
+6. Execute o exemplo de aplicação:
+   ```bash
+   node app-example.js
+   ```
 
 ## Boas Práticas
 
@@ -68,6 +111,7 @@ O arquivo [create_table_example.sql](./create_table_example.sql) contém exemplo
 - [Documentação do Supabase sobre Tabelas](https://supabase.com/docs/guides/database/tables)
 - [Documentação do PostgreSQL](https://www.postgresql.org/docs/)
 - [Guia de SQL do Supabase](https://supabase.com/docs/guides/database/sql)
+- [Documentação da biblioteca cliente JavaScript](https://supabase.com/docs/reference/javascript/introduction)
 
 ## Como Contribuir
 
